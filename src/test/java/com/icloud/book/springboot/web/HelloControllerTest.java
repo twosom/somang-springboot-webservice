@@ -22,6 +22,7 @@ public class HelloControllerTest {
     public void returnHello() throws Exception {
         String hello = "hello";
 
+        System.out.println("mvc = " + mvc);
         mvc.perform(MockMvcRequestBuilders.get("/hello"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(hello));

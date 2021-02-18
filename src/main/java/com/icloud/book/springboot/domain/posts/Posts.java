@@ -14,14 +14,14 @@ import javax.persistence.*;
 public class Posts extends BaseTimeEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "posts_id")
     private Long id;
 
     @Column(length = 500, nullable = false)
     private String title;
 
-    @Column(columnDefinition = "CLOB", nullable = false)
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
     private String author;
