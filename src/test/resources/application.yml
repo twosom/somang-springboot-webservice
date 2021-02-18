@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: SOMANG
+    password: SOMANG
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@10.211.55.3:1521:xe
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.Oracle12cDialect
